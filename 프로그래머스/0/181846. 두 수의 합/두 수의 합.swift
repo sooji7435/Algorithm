@@ -19,9 +19,9 @@ if num1.count < num2.count {
     
     for n in num1.count...num2.count - 1 {
     if carry != 0 {
-        sum = (Int(num2[n])! + carry) % 10
-        total.append(sum)
-        carry = (Int(num2[n])! + carry) / 10
+        sum = (Int(num2[n])! + carry)
+        total.append(sum % 10)
+        carry = sum / 10
         } else { total.append((Int(num2[n])!)) }
     }
     
@@ -42,8 +42,9 @@ for i in 0...num2.count - 1 {
     if num1.count != num2.count {
         for n in num2.count...num1.count - 1 {
             if carry != 0 {
-                total.append((Int(num1[n])! + carry) % 10)
-                carry = (Int(num1[n])! + carry) / 10
+                sum = (Int(num1[n])! + carry)
+                total.append(sum % 10)
+                carry = sum / 10
         } else { total.append((Int(num1[n])!)) }
     }
     
