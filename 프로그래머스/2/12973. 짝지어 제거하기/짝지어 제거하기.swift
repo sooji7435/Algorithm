@@ -1,7 +1,6 @@
 import Foundation
 // 스택 이용
 // 괄호 문제와 유사
-
 func solution(_ s:String) -> Int{
     var stack: [Character] = []
     
@@ -22,5 +21,4 @@ func solution(_ s:String) -> Int{
     if stack.isEmpty {
         return 1
     } else { return 0 }
-    
 }
